@@ -1,5 +1,6 @@
-var stringIndicator = "%s";
+///vsprintf(string text, array args)
 
+var stringIndicator = "%s";
 var currentText = argument0;
 var args = argument1;
 
