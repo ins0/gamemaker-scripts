@@ -1,4 +1,4 @@
-///text_sprintf(string text, string args[, string ...])
+///string_sprintf(string text, string args[, string ...])
 
 var stringIndicator = "%s";
 var currentText;
