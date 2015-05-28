@@ -1,0 +1,31 @@
+var stringIndicator = "%s";
+
+var currentText = argument0;
+var args = argument1;
+
+// count arguments placed in text and received per args
+var argCounter = array_length_1d(args);
+var expectedArgs = string_count(stringIndicator, currentText);
+if (argCounter < expectedArgs) {
+    show_error('vsprintf: too few arguments - expected: ' + string(expectedArgs) + ' - got: ' + string(argCounter));
+}
+
+// replace text
+var indicatorPosition;
+for (var i = 0; i < argCounter; i++) {
+    // find the first indicator
+    indicatorPosition = string_pos(stringIndicator, currentText);
+    
+    // skip if no more indicators are found
+    if (!indicatorPosition) {
+        continue;
+    }
+    
+    // delete the first indicator
+    currentText = string_delete(currentText, indicatorPosition, string_length(stringIndicator));
+    
+    // insert the var at indicator position
+    currentText = string_insert(args[i], currentText, indicatorPosition);
+}
+
+return currentText;
