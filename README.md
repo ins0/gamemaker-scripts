@@ -3,18 +3,18 @@ Additional Scripts/Functions for GameMaker: Studio from YoYo Games
 
 ## string functions
 
-### sprintf
+### text_sprintf
 ```gms
-var message = sprintf("Hello %s how you're %s?", "Tom", "doing");
+var message = text_sprintf("Hello %s how you're %s?", "Tom", "doing");
 
 // Hello Tom how you're doing?
 ```
-### vsprintf
+### text_vsprintf
 ```gms
 var testArgs;
 testArgs[0] = "Tom";
 testArgs[1] = "doing";
 
-var test = vsprintf("Hello %s how you're %s?", testArgs);
+var test = text_vsprintf("Hello %s how you're %s?", testArgs);
 // Hello Tom how you're doing?
 ```
