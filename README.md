@@ -5,7 +5,7 @@ Additional Scripts/Functions for GameMaker: Studio from YoYo Games
 
 ### sprintf
 ```gms
-var message = sprintf("Hello %s how you're %s ?", "Tom", "doing");
+var message = sprintf("Hello %s how you're %s?", "Tom", "doing");
 
-// Hello Tom how you're doing ?
+// Hello Tom how you're doing?
 ```
