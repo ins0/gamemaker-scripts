@@ -1,7 +1,7 @@
 # gamemaker-scripts
 Additional Scripts/Functions for GameMaker: Studio from YoYo Games
 
-## functions
+## string functions
 
 ### sprintf
 ```gms
