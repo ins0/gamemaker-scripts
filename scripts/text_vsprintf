@@ -1,4 +1,4 @@
-///vsprintf(string text, array args)
+///text_vsprintf(string text, array args)
 
 var stringIndicator = "%s";
 var currentText = argument0;
