@@ -1,5 +1,6 @@
-var stringIndicator = "%s";
+///sprintf(string text, string args[, string ...])
 
+var stringIndicator = "%s";
 var currentText;
 var args;
 
