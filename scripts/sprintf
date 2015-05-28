@@ -1,0 +1,38 @@
+var stringIndicator = "%s";
+
+var currentText;
+var args;
+
+// workaround dynamic/optional script args
+var argCounter = 0;
+for(var i = 0; i < argument_count; i++) {
+    // store first as currentText
+    if (i == 0) {
+        currentText = string(argument[i]);
+    } else {
+        // store args
+        args[argCounter] = string(argument[i]);
+        argCounter++;
+    }
+}
+
+// count arguments placed in text and received per args
+var expectedArgs = string_count(stringIndicator, currentText);
+if (argCounter < expectedArgs) {
+    show_error('sprintf: too few arguments - expected: ' + string(expectedArgs) + ' - got: ' + string(argCounter));
+}
+
+// replace text
+var indicatorPosition;
+for (var i = 0; i < argCounter; i++) {
+    // find the first indicator
+    indicatorPosition = string_pos(stringIndicator, currentText);
+    
+    // delete the first indicator
+    currentText = string_delete(currentText, indicatorPosition, string_length(stringIndicator));
+    
+    // insert the var at indicator position
+    currentText = string_insert(args[i], currentText, indicatorPosition);
+}
+
+return currentText;
