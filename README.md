@@ -18,3 +18,10 @@ testArgs[1] = "doing";
 var test = string_vsprintf("Hello %s how you're %s?", testArgs);
 // Hello Tom how you're doing?
 ```
+### string_explode
+```gms
+var test = string_explode("Foo,Bar,Baz", ",");
+// test[0] = Foo
+// test[1] = Bar
+// test[2] = Baz
+```
