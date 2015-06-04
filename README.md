@@ -29,6 +29,24 @@ var test = array_arsort(testArray);
 // test[2] = 2
 // test[3] = 1
 ```
+### array_map
+toCallScriptName
+```gms
+show_debug_message(argument0);
+```
+
+```gms
+testArray[0] = 6;
+testArray[1] = 2;
+testArray[3] = 8;
+testArray[2] = 1;
+
+array_map(testArray, "toCallScriptName");
+// 6
+// 2
+// 8
+// 1
+```
 
 ## string functions
 

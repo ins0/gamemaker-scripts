@@ -1,0 +1,11 @@
+///array_map(array array, string function)
+
+var walkArray = argument0;
+var toCall = asset_get_index(argument1);
+
+if (array_length_1d(walkArray) >= 1) {
+    for(var i=0; i < array_length_1d(walkArray); ++i)
+    {
+        script_execute(toCall, walkArray[i]);
+    }
+}
