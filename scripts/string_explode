@@ -1,0 +1,25 @@
+///string_explode(string text, string seperator)
+
+var message = argument0;
+var seperator = argument1;
+var returnValue;
+
+if (string_length(seperator) <= 0) {
+    show_error('string_explode: missing seperator', true);
+} 
+
+var seperatorCount = string_count(seperator, message);
+
+if (seperatorCount == 0) {
+    return returnValue[0] = message;
+}
+
+for (var i = 0; i < seperatorCount; ++i)
+{
+    seperatorPosition = string_pos(seperator, message);
+    returnValue[i] = string_copy(message, 1, seperatorPosition - 1);
+    message = string_delete(message, 1, seperatorPosition);
+}
+returnValue[seperatorCount] = string_copy(message, 1, string_length(message));
+
+return returnValue;
