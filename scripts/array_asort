@@ -1,0 +1,27 @@
+///array_asort(array toSort)
+
+var toSort = argument0;
+
+if (array_length_1d(toSort) <= 1) {
+    return toSort;
+}
+
+// bubble sort
+var isDirty = true;
+while (isDirty)
+{
+    isDirty = false;
+    for(var i=0; i < (array_length_1d(toSort) - 1); i++)
+    {
+        var current = toSort[i];
+        var next = toSort[i + 1];   
+        
+        if (current > next) {
+            isDirty = true;
+            toSort[i] = next;
+            toSort[i+1] = current;   
+        }
+    }
+}
+    
+return toSort;
