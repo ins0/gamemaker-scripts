@@ -1,6 +1,35 @@
 # gamemaker-scripts
 Additional Scripts/Functions for GameMaker: Studio from YoYo Games
 
+## array functions
+
+### array_asort
+```gms
+testArray[0] = 6;
+testArray[1] = 2;
+testArray[3] = 8;
+testArray[2] = 1;
+
+var test = array_asort(testArray);
+// test[0] = 1
+// test[1] = 2
+// test[2] = 6
+// test[3] = 8
+```
+### array_arsort
+```gms
+testArray[0] = 6;
+testArray[1] = 2;
+testArray[3] = 8;
+testArray[2] = 1;
+
+var test = array_arsort(testArray);
+// test[0] = 8
+// test[1] = 6
+// test[2] = 2
+// test[3] = 1
+```
+
 ## string functions
 
 ### string_sprintf
