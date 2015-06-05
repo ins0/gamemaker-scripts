@@ -1,0 +1,16 @@
+///string_reverse(string text)
+
+var text = argument0;
+var reverseText = "";
+
+if (string_length(text) == 1)
+{
+    return text;
+}
+
+for(var i=string_length(text); i > 0; --i)
+{
+    reverseText = reverseText + string_copy(text, i, 1); 
+}
+
+return reverseText;

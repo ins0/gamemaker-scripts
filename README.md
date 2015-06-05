@@ -72,3 +72,8 @@ var test = string_explode("Foo,Bar,Baz", ",");
 // test[1] = Bar
 // test[2] = Baz
 ```
+### string_reverse
+```gms
+var test = string_reverse("wellcome");
+// emocllew
+```
